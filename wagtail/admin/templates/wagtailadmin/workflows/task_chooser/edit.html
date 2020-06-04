@@ -1,0 +1,17 @@
+{% load i18n %}
+
+{% trans "Editing" as edit_str %}
+{% include "wagtailadmin/shared/header.html" with title=edit_str subtitle=task.name tabbed=1 merged=1 icon="doc-full-inverse" %}
+
+{{ form.media.css }}
+{{ form.media.js }}
+
+<div class="tab-content nice-padding">
+    <form class="task-edit" action="{{ edit_url }}" enctype="multipart/form-data" method="POST" novalidate>
+        {% csrf_token %}
+
+        {{ form }}
+
+        <button type="submit">{% trans "Save" %}</button>
+    </form>
+</div>

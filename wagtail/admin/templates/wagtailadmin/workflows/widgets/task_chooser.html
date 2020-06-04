@@ -1,0 +1,10 @@
+{% extends "wagtailadmin/widgets/chooser.html" %}
+{% block chooser_class %}task-chooser{% endblock %}
+
+{% block chosen_state_view %}
+    <span class="name">{{ task.name }}</span>
+{% endblock %}
+
+{% block edit_link %}
+    <button type="button" class="button action-edit button-small button-secondary" data-task-edit-url="{% if task %}{% url 'wagtailadmin_workflows:task_chooser_edit' task.id %}{% endif %}">{{ widget.link_to_chosen_text }}</button>
+{% endblock %}
