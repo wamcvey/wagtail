@@ -119,6 +119,7 @@ Serving multiple sitemaps
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to support the sitemap indexes from Django then you will need to
-use the index view from ``wagtail.contrib.sitemaps.views`` instead of the index
-view from ``django.contrib.sitemaps.views``.  Please see the Django
-documentation for further details.
+use the index view from ``django.contrib.sitemaps.views`` instead of the
+index view from ``wagtail.contrib.sitemaps.views``.  Please see the
+`Django documentation <https://docs.djangoproject.com/en/dev/ref/contrib/sitemaps/>`_
+for further details.
